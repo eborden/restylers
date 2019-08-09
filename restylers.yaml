@@ -165,6 +165,26 @@
   supports_multiple_paths: false
   documentation:
   - https://github.com/FriendsOfPHP/PHP-CS-Fixer
+- name: prettier-markdown
+  image: restyled/restyler-prettier-markdown:v1.18.2
+  command:
+  - prettier
+  - "--write"
+  - "--parser"
+  - markdown
+  - "--print-width"
+  - '80'
+  - "--prose-wrap"
+  - always
+  arguments: []
+  include:
+  - "**/*.md"
+  - "**/*.markdown"
+  interpreters: []
+  supports_arg_sep: true
+  supports_multiple_paths: true
+  documentation:
+  - https://prettier.io/blog/2017/11/07/1.8.0.html
 - name: prettier
   image: restyled/restyler-prettier:v1.14.2
   command:
